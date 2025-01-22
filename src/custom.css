@@ -1,0 +1,38 @@
+.site-title:where(.astro-gxsqlwnp) {
+  gap: 12px;
+}
+
+[data-theme="light"] .site-title {
+  color: hsl(0, 0%, 10%);
+}
+
+[data-theme="dark"] .site-title {
+  color: hsl(0, 0%, 90%);
+}
+
+.hero:where(.astro-tkt3ud4q) {
+  grid-template-columns: 6fr 5fr;
+  padding-block: clamp(2.5rem, calc(1rem + 5vmin), 10rem);
+}
+
+[data-has-hero] .page {
+  --hero-gradient: hsla(241, 63%, 59%, 0.2);
+  background: linear-gradient(205deg, var(--hero-gradient), transparent 50%);
+}
+
+[data-has-hero] header {
+  background: hsla(0, 0%, 0%, 0.2);
+  border-bottom: solid 1px transparent;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+[data-has-hero][data-theme="light"] header {
+  background: hsla(0, 0%, 90%, 0.2);
+}
+
+.text-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 5rem 0;
+}

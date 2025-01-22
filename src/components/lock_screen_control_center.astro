@@ -1,0 +1,46 @@
+---
+import type { Props } from '../props';
+import { Image } from "astro:assets";
+import lock_screen_control_center from "../assets/lock_screen_control_center.png";
+---
+
+<div class="demo-container">
+  <div class="text-side">
+    <slot />
+  </div>
+  <div class="image-side">
+    <div class="image-container">
+      <div class="image-content">
+        <Image
+          src={lock_screen_control_center}
+          alt="Lock screen control center"
+          class="image-content"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .demo-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 1rem 6rem;
+  }
+
+  .image-side {
+    flex: 1;
+    min-width: 280px;
+  }
+
+  .image-content {
+    margin: 0 auto;
+    max-width: 350px;
+  }
+
+  .text-side {
+    flex: 1;
+    min-width: 280px;
+  }
+</style>

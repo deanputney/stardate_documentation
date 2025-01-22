@@ -1,36 +1,116 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
+title: Tap, talk, done!
+description: Super fast notes for your Apple Watch and iPhone.
 template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: Super fast notes for Apple Watch and iPhone.
   image:
-    file: ../../assets/houston.webp
+    file: ../../assets/homepage_puppet_1000.png
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Get the iOS Alpha
+      link: /guides/testflight/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
+    - text: Watch the intro video
+      link: /guides/introduction
       icon: external
       variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import WatchDemo from "../../components/watch_demo.astro";
 
-## Next steps
+<WatchDemo>
+  <h1>Straight to the point</h1>
+  <p>**Tap the star** and you're instantly recording a new note.</p>
+  <p>
+    Say whatever you're thinking– No need to say punctuation or talk like a
+    robot. Then get back to your day.
+  </p>
+</WatchDemo>
+
+import LockScreenControlCenter from "../../components/lock_screen_control_center.astro";
+
+<LockScreenControlCenter>
+  <h1>Fast on the phone too</h1>
+  <p>
+    Add the star to your lock screen or control center to kick off a note on
+    your phone as well.
+  </p>
+</LockScreenControlCenter>
+
+import PhoneSearchDemo from "../../components/phone_search_demo.astro";
+
+<PhoneSearchDemo>
+  <h1>All the power of text</h1>
+  <p>
+    Transcription is done on your phone, so it's fast and secure. Easily search
+    and review your notes right away.
+  </p>
+</PhoneSearchDemo>
+
+import PhoneImage from "../../components/phone_image.astro";
+
+<PhoneImage>
+  <h1>Bring your own AI</h1>
+  <p>
+    Download all your data and ask questions on your own AI to find amazing
+    insights and do more complex things!
+  </p>
+</PhoneImage>
+
+import { Card, CardGrid } from "@astrojs/starlight/components";
+
+## Features
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+  <Card title="Actually good speech to text" icon="comment">
+    Just talk normally. No need to say punctuation.
+  </Card>
+  <Card title="Text by default" icon="add-document">
+    Easily search and review your notes.
+  </Card>
+  <Card title="Private" icon="seti:lock">
+    Your notes are stored only on your phone and your iCloud.
+  </Card>
+  <Card title="Bring your own AI" icon="setting">
+    Download all your data and ask questions on your own AI.
+  </Card>
 </CardGrid>
+
+<div class="text-container">
+# What do people use Stardate for?
+
+People are already using Stardate for all sorts of things. Here are just a few examples:
+
+- Remembering names of people you meet.
+- Taking notes while reading a book.
+- Capturing that "tip of your tongue" idea.
+- Keeping track of your puppy's weight.
+- Making sure you ask the doctor about that weird rash.
+- Reminding yourself if you've taken your medication.
+- Noting the cross streets of interesting neighborhoods.
+- Debriefing after a promising date.
+
+# Where we're going
+
+Stardate is not just a note taking app. It will also be the way you talk to your personal AI. But unlike other AI apps, I believe you should run and own your own AI. Don't rent it from someone else.
+
+Here's an eventual roadmap of what Stardate will do:
+
+- Automatic note tagging and categorization
+- Calendar integration
+- To do and reminder integration
+- Chart generation for data points
+
+## Frequently asked questions
+
+**What's up with the puppet?**
+
+I made "Lil Dean" for a Halloween costume a couple years ago. When I needed to make a demo video for Stardate, I thought it would be funny if the puppet was the spokesperson. Plus, then I didn't have to get a haircut.
+
+The puppet is not in the app.
+
+**Why call it Stardate?**
+
+In sci-fi movies, when the captain is recording their log on the computer, they're always saying "Stardate 1234.56". Just seemed cool!
+
+</div>
