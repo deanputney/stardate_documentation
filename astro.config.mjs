@@ -5,7 +5,6 @@ import starlight from "@astrojs/starlight";
 // https://astro.build/config
 export default defineConfig({
   site: "https://idealistsoftware.github.io",
-  base: "stardate_documentation",
   integrations: [
     starlight({
       title: "Stardate",
