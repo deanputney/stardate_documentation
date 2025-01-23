@@ -45,6 +45,9 @@ export default defineConfig({
         },
       ],
       customCss: ["./src/custom.css"],
+      components: {
+        Head: "./src/components/Head.astro",
+      },
     }),
   ],
 });
