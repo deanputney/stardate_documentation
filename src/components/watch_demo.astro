@@ -5,10 +5,10 @@ import apple_watch_bezel from "../assets/apple_watch_bezel.svg";
 import complication_start from "../assets/complication_start.mp4";
 ---
 
-<div class="demo-container">
-  <div class="watch-side">
-    <div class="watch-container">
-      <div class="watch-content">
+<div class="sl-flex demo-container">
+  <div class="sl-flex watch-side">
+    <div class="sl-flex watch-container">
+      <div class="sl-flex watch-content">
         <div class="video-mask">
           <video autoplay loop muted playsinline class="watch-video">
             <source src={complication_start} type="video/mp4" />
@@ -29,15 +29,16 @@ import complication_start from "../assets/complication_start.mp4";
 
 <style>
   .demo-container {
-    display: flex;
+    display: grid;
     align-items: center;
     gap: 2rem;
-    padding: 1rem 1rem 6rem;
+    grid-template-columns: 1fr;
+    padding: 1rem 1rem 2rem;
   }
 
   .watch-side {
-    flex: 1;
-    min-width: 280px;
+    order: -1;
+    min-width: 150px;
   }
 
   .text-side {
@@ -49,6 +50,8 @@ import complication_start from "../assets/complication_start.mp4";
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 10rem;
+    margin: 0 auto;
   }
 
   .watch-content {
@@ -58,7 +61,7 @@ import complication_start from "../assets/complication_start.mp4";
 
   .video-mask {
     position: absolute;
-    top: 52%;
+    top: 53%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 76%;
@@ -79,5 +82,31 @@ import complication_start from "../assets/complication_start.mp4";
   .watch-bezel {
     position: relative;
     z-index: 2;
+  }
+
+  @media (min-width: 50rem) {
+    .demo-container {
+      grid-template-columns: 5fr 4fr;
+      padding: 1rem 1rem 6rem;
+    }
+
+    .watch-side {
+      order: 0;
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .watch-container {
+      max-width: 20rem;
+    }
+
+    .text-side {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .video-mask {
+      top: 52%;
+    }
   }
 </style>

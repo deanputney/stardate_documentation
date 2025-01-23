@@ -1,4 +1,4 @@
-.site-title:where(.astro-gxsqlwnp) {
+.site-title {
   gap: 12px;
 }
 
@@ -10,9 +10,16 @@
   color: hsl(0, 0%, 90%);
 }
 
-.hero:where(.astro-tkt3ud4q) {
-  grid-template-columns: 6fr 5fr;
-  padding-block: clamp(2.5rem, calc(1rem + 5vmin), 10rem);
+.hero {
+  /* grid-template-columns: 6fr 5fr;
+  padding-block: clamp(2.5rem, calc(1rem + 5vmin), 10rem); */
+}
+
+@media (min-width: 50rem) {
+  .hero {
+    grid-template-columns: 6fr 5fr;
+    padding-block: clamp(2.5rem, calc(1rem + 5vmin), 10rem);
+  }
 }
 
 [data-has-hero] .page {

@@ -29,19 +29,22 @@ import search_demo from "../assets/search_demo.mp4";
 
 <style>
   .demo-container {
-    display: flex;
+    display: grid;
     align-items: center;
     gap: 2rem;
-    padding: 1rem 1rem 6rem;
+    grid-template-columns: 1fr;
+    padding: 1rem 1rem 2rem;
   }
 
   .phone-side {
-    flex: 1;
-    min-width: 280px;
+    object-fit: contain;
+    width: min(70%, 20rem);
+    height: auto;
+    margin-inline: auto;
+    order: -1;
   }
 
   .text-side {
-    flex: 1;
     min-width: 280px;
   }
 
@@ -49,7 +52,7 @@ import search_demo from "../assets/search_demo.mp4";
     display: flex;
     justify-content: center;
     align-items: center top;
-    max-height: 300px;
+    max-height: 200px;
     overflow: hidden;
   }
 
@@ -62,7 +65,7 @@ import search_demo from "../assets/search_demo.mp4";
 
   .video-mask {
     position: absolute;
-    top: 12%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, 0%);
     width: 89%;
@@ -83,5 +86,27 @@ import search_demo from "../assets/search_demo.mp4";
   .phone-bezel {
     position: relative;
     z-index: 2;
+  }
+
+  @media (min-width: 50rem) {
+    .demo-container {
+      grid-template-columns: 5fr 4fr;
+      padding: 1rem 1rem 6rem;
+    }
+
+    .phone-side {
+      order: 0;
+      width: 100%;
+      min-width: 280px;
+      margin-inline: 0;
+    }
+
+    .phone-container {
+      max-height: 300px;
+    }
+
+    .video-mask {
+      top: 12%;
+    }
   }
 </style>

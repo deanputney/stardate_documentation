@@ -23,15 +23,19 @@ import lock_screen_control_center from "../assets/lock_screen_control_center.png
 
 <style>
   .demo-container {
-    display: flex;
+    display: grid;
     align-items: center;
     gap: 2rem;
-    padding: 1rem 1rem 6rem;
+    grid-template-columns: 1fr;
+    padding: 1rem 1rem 2rem;
   }
 
   .image-side {
-    flex: 1;
-    min-width: 280px;
+    object-fit: contain;
+    width: min(70%, 20rem);
+    height: auto;
+    margin-inline: auto;
+    order: -1;
   }
 
   .image-content {
@@ -40,7 +44,20 @@ import lock_screen_control_center from "../assets/lock_screen_control_center.png
   }
 
   .text-side {
-    flex: 1;
     min-width: 280px;
+  }
+
+  @media (min-width: 50rem) {
+    .demo-container {
+      grid-template-columns: 5fr 4fr;
+      padding: 1rem 1rem 6rem;
+    }
+
+    .image-side {
+      order: 0;
+      width: 100%;
+      min-width: 280px;
+      margin-inline: 0;
+    }
   }
 </style>

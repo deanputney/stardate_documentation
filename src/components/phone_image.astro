@@ -27,19 +27,22 @@ import screenshot from "../assets/iggy_weight.png";
 
 <style>
   .demo-container {
-    display: flex;
+    display: grid;
     align-items: center;
     gap: 2rem;
-    padding: 1rem 1rem 6rem;
+    grid-template-columns: 1fr;
+    padding: 1rem 1rem 2rem;
   }
 
   .phone-side {
-    flex: 1;
-    min-width: 280px;
+    object-fit: contain;
+    width: min(70%, 20rem);
+    height: auto;
+    margin-inline: auto;
+    order: -1;
   }
 
   .text-side {
-    flex: 1;
     min-width: 280px;
   }
 
@@ -47,7 +50,7 @@ import screenshot from "../assets/iggy_weight.png";
     display: flex;
     justify-content: center;
     align-items: center top;
-    max-height: 470px;
+    max-height: 320px;
     overflow: hidden;
   }
 
@@ -60,7 +63,7 @@ import screenshot from "../assets/iggy_weight.png";
 
   .screenshot-mask {
     position: absolute;
-    top: 8%;
+    top: 6%;
     left: 50%;
     transform: translate(-50%, 0%);
     width: 89%;
@@ -81,5 +84,27 @@ import screenshot from "../assets/iggy_weight.png";
   .phone-bezel {
     position: relative;
     z-index: 2;
+  }
+
+  @media (min-width: 50rem) {
+    .demo-container {
+      grid-template-columns: 5fr 4fr;
+      padding: 1rem 1rem 6rem;
+    }
+
+    .phone-side {
+      order: 0;
+      width: 100%;
+      min-width: 280px;
+      margin-inline: 0;
+    }
+
+    .phone-container {
+      max-height: 470px;
+    }
+
+    .screenshot-mask {
+      top: 8%;
+    }
   }
 </style>
