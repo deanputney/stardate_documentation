@@ -21,6 +21,10 @@ export default defineConfig({
           items: [
             // Each item here is one entry in the navigation menu.
             {
+              label: "TestFlight Setup",
+              slug: "guides/testflight",
+            },
+            {
               label: "Apple Watch Installation",
               slug: "guides/apple-watch-installation",
             },
@@ -36,7 +40,6 @@ export default defineConfig({
               label: "iPhone Lock Screen",
               slug: "guides/iphone-lock-screen",
             },
-            { label: "Example Guide", slug: "guides/example" },
           ],
         },
         {
