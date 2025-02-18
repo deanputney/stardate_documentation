@@ -3,8 +3,6 @@ title: Apple Watch Installation
 description: A guide in my new Starlight docs site.
 ---
 
-# Apple Watch Installation
-
 Once you've installed Stardate on your iPhone, you'll need to confirm that it's installed on your Apple Watch. It should be installed automatically, but you can also check in the Watch app on your iPhone if it's not showing up.
 
 1. On your iPhone, open the Watch app.
