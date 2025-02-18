@@ -30,6 +30,11 @@ jobs:
           # path: . # The root location of your Astro project inside the repository. (optional)
           node-version: 22.2.0 # The specific version of Node that should be used to build your site. Defaults to 20. (optional)
           package-manager: pnpm@latest # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
+          install-command: |
+            pnpm install
+            pnpm add sharp
+            pnpm list sharp
+            ls -la node_modules/sharp
 
   deploy:
     needs: build
