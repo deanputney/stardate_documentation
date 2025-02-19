@@ -33,12 +33,8 @@ export default defineConfig({
               slug: "guides/apple-watch-complications",
             },
             {
-              label: "iPhone Control Center",
-              slug: "guides/iphone-control-center",
-            },
-            {
-              label: "iPhone Lock Screen",
-              slug: "guides/iphone-lock-screen",
+              label: "iOS Widgets and Control Center",
+              slug: "guides/iphone-widgets",
             },
           ],
         },
