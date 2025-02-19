@@ -21,8 +21,8 @@ export default defineConfig({
           items: [
             // Each item here is one entry in the navigation menu.
             {
-              label: "TestFlight Setup",
-              slug: "guides/testflight",
+              label: "Introduction",
+              slug: "guides",
             },
             {
               label: "Apple Watch Installation",
@@ -43,9 +43,18 @@ export default defineConfig({
           ],
         },
         {
-          label: "Reference",
-          autogenerate: { directory: "reference" },
+          label: "Bring Your Own AI",
+          items: [
+            {
+              label: "Why Bring Your Own AI?",
+              slug: "bring-your-own-ai",
+            },
+          ],
         },
+        // {
+        //   label: "Reference",
+        //   autogenerate: { directory: "reference" },
+        // },
       ],
       customCss: ["./src/custom.css"],
       components: {
