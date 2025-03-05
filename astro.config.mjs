@@ -47,6 +47,28 @@ export default defineConfig({
             },
           ],
         },
+        {
+          label: "Help!",
+          items: [
+            {
+              label: 'The app is "stuck"!',
+              slug: "help/app-is-stuck",
+            },
+          ],
+        },
+        {
+          label: "About",
+          items: [
+            {
+              label: "About Stardate",
+              slug: "about",
+            },
+            {
+              label: "Privacy Policy",
+              slug: "privacy",
+            },
+          ],
+        },
         // {
         //   label: "Reference",
         //   autogenerate: { directory: "reference" },
