@@ -1,0 +1,65 @@
+---
+title: The app is "stuck"!
+description: What to do if entries don't transcribe automatically, or the red loading bar doesn't load quickly.
+---
+
+import { Badge } from "@astrojs/starlight/components";
+
+## <Badge text="As of version 1.2.2" variant="note" />
+
+---
+
+If you're a new user to Stardate, you might encounter a slow loading problem. This can be a frustating start, but don't worry! Hopefully this guide will help you get going quickly.
+
+#### The problem
+
+- The app appears "stuck".
+- The red loading bar at the top of the screen takes a long time to load.
+- New entries say "Loading transcription model."
+
+import { Image } from 'astro:assets';
+import appStuckImage from '../../../assets/help/app-stuck.jpg';
+
+<Image src={appStuckImage} alt="The loading bar isn't moving, and it looks stuck!" style="margin: 0 auto; max-width: 60%;" />
+
+#### Some solutions
+
+
+
+import { Steps } from "@astrojs/starlight/components";
+import { Aside } from '@astrojs/starlight/components';
+
+Try these in order:
+
+<Steps>
+  1. Wait a little longer to see if the loading bar gets all the way across. The first time this happens can be slow, maybe as much as a minute. 
+
+      <Aside title="Don't switch apps!">
+      You must leave Stardate open to allow the initial loading process to complete. 
+      </Aside>
+
+  2. If the loading bar is not moving at all, try closing the Stardate app and relaunching. 
+
+  3. Try closing other apps you're not using to free up memory. Then reopen Stardate.
+</Steps>
+
+#### What's wrong
+
+Transcribing text with Whisper directly on your phone is a pretty new and resource-intensive process! There are really two major hurdles right now:
+
+1. Whisper needs a lot of memory to run, more than other apps.
+2. The first time you load the app, Whisper needs to compile– or "specialize" –for your specific phone. This is a slow process.
+
+Stardate tries to be respectful of your phone's memory by releasing the large amount of memory when you switch away to another app. This can make the initial experience seem like it's not working if you change apps while it's getting started.
+
+Additionally, once that specialization process completes, if your phone is very low on memory sometimes the system will automatically recover memory by removing the specialized model's cache. That means the next time you load the app it'll have to start all over– very frustrating!
+
+Transcribing via Whisper locally on the phone is still somewhat experimental. Thanks for your patience while I improve the experience! 😁
+
+#### How to close or "quit" an app
+
+1. Swipe up from the bottom of the screen and pause in the middle of the screen.
+2. Swipe right or left to find the app that you want to close.
+3. Swipe up on the app's preview to close the app.
+
+See Apple's [support article on closing apps](https://support.apple.com/en-us/109359) for a demonstration video.
