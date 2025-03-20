@@ -1,0 +1,38 @@
+.demo-container {
+  display: grid;
+  align-items: center;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  padding: 1rem 1rem 2rem;
+}
+
+.image-side {
+  object-fit: contain;
+  width: min(70%, 20rem);
+  height: auto;
+  margin-inline: auto;
+  order: -1;
+}
+
+.image-content {
+  margin: 0 auto;
+  max-width: 350px;
+}
+
+.text-side {
+  min-width: 280px;
+}
+
+@media (min-width: 50rem) {
+  .demo-container {
+    grid-template-columns: 4fr 4fr;
+    padding: 1rem 1rem 6rem;
+  }
+
+  .image-side {
+    order: 0;
+    width: 100%;
+    min-width: 280px;
+    margin-inline: 0;
+  }
+}

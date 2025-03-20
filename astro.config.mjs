@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
+import starlightBlog from "starlight-blog";
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,6 +13,7 @@ export default defineConfig({
         light: "./src/assets/logo-light.svg",
         dark: "./src/assets/logo-dark.svg",
       },
+      plugins: [starlightBlog()],
       // social: {
       //   github: "https://github.com/withastro/starlight",
       // },
@@ -74,7 +76,14 @@ export default defineConfig({
         //   autogenerate: { directory: "reference" },
         // },
       ],
-      customCss: ["./src/custom.css"],
+      customCss: [
+        "./src/custom.css",
+        "./src/styles/watch_bezel.css",
+        "./src/styles/watch_demo.css",
+        "./src/styles/phone_search_demo.css",
+        "./src/styles/phone_image.css",
+        "./src/styles/lock_screen_control_center.css",
+      ],
       components: {
         Head: "./src/components/Head.astro",
       },
