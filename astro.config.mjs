@@ -48,6 +48,15 @@ export default defineConfig({
           ],
         },
         {
+          label: "How To",
+          items: [
+            {
+              label: "Accessing Your Files in iCloud Drive",
+              slug: "help/accessing-files",
+            },
+          ],
+        },
+        {
           label: "Help!",
           items: [
             {
