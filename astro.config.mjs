@@ -36,6 +36,10 @@ export default defineConfig({
               label: "iOS Widgets and Control Center",
               slug: "guides/iphone-widgets",
             },
+            {
+              label: "Accessing Your Files in iCloud Drive",
+              slug: "guides/accessing-files",
+            },
           ],
         },
         {
@@ -44,15 +48,6 @@ export default defineConfig({
             {
               label: "Why Bring Your Own AI?",
               slug: "bring-your-own-ai",
-            },
-          ],
-        },
-        {
-          label: "How To",
-          items: [
-            {
-              label: "Accessing Your Files in iCloud Drive",
-              slug: "help/accessing-files",
             },
           ],
         },
