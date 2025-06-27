@@ -36,6 +36,10 @@ export default defineConfig({
               label: "iOS Widgets and Control Center",
               slug: "guides/iphone-widgets",
             },
+            {
+              label: "Accessing Your Files in iCloud Drive",
+              slug: "guides/accessing-files",
+            },
           ],
         },
         {

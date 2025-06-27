@@ -1,0 +1,84 @@
+---
+title: Accessing Your Files in iCloud Drive
+description: How to find and access your Stardate recordings and transcriptions in iCloud Drive.
+---
+
+import { Steps } from "@astrojs/starlight/components";
+import { Aside } from '@astrojs/starlight/components';
+
+## Where Your Files Are Stored
+
+Stardate automatically saves your audio recordings and transcriptions to your iCloud Drive. This makes it easy to access your files from any Apple device. Two files are created each time you record a note:
+
+1. A WAV file of your audio recording
+2. A text file containing the transcription
+
+<Aside title="Privacy First">
+Your files are stored in your personal iCloud Drive and not on any Stardate servers. This means your data stays private and under your control.
+</Aside>
+
+## Accessing Files on Mac
+
+<Steps>
+  1. Open **Finder** on your Mac
+  
+  2. In the sidebar, click on **iCloud Drive**
+  
+  3. Navigate to the **Stardate** folder
+  
+  4. Inside this folder, you'll find two subfolders:
+     - **Recordings**: Contains your WAV audio files
+     - **Transcriptions**: Contains your text transcription files
+</Steps>
+
+The path to your Stardate files in Terminal is:
+
+```
+~/Library/Mobile\ Documents/iCloud~com~deanputney~Stardate/Documents/
+```
+
+## Accessing Files on iPhone or iPad
+
+<Steps>
+  1. Open the **Files** app on your iOS device
+  
+  2. Tap on **Browse** at the bottom of the screen if not already selected
+  
+  3. Select **iCloud Drive**
+  
+  4. Navigate to the **Stardate** folder
+  
+  5. Access your **Recordings** and **Transcriptions** subfolders
+</Steps>
+
+## File Naming Convention
+
+Stardate saves your files with names that include timestamps to help you identify when they were created. The naming format is:
+
+```
+YYYY-MM-DD_HH-MM-SS
+```
+
+For example:
+- `2023-05-15_09-32-45.wav` (audio recording)
+- `2023-05-15_09-32-45.txt` (transcription)
+
+## Working with Your Files
+
+Once you've found your files in iCloud Drive, you can:
+
+- Listen to the audio recordings by opening the WAV files
+- Read your transcriptions by opening the text files
+- Copy the text to use in other applications
+- Back up the files to another location
+- Import the files into other data analysis tools
+
+## Troubleshooting
+
+If you can't find your files in iCloud Drive, check the following:
+
+- Make sure you have iCloud Drive enabled on your device
+- Check that you have sufficient iCloud storage space
+- Ensure your device is connected to the internet and has synced recently
+
+If you're still having trouble locating your files, please email [dean@stardateapp.com](mailto:dean@stardateapp.com) for assistance.
